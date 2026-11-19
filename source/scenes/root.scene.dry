@@ -5,6 +5,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 @start_menu
 new-page: true
 style: main-menu
+set-bg: https://raw.githubusercontent.com/NapoleonIVBonaparte/SFRY/main/out/html/img/bu/menu_bg.jpg
 go-to: start_menu_2
 on-arrival: {!
 // Main menu styling. It is injected here (rather than in game.css) so that it
@@ -14,7 +15,7 @@ if (!document.getElementById('bu-menu-style')) {
         '#content.main-menu { text-align: center; }' +
         '#content.main-menu .bu-hero { margin: -1em -1.5em 1.5em -1.5em; padding: 2.5em 1em 2.2em 1em;' +
         '  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),' +
-        '  linear-gradient(to bottom, #003893 0%, #003893 33.3%, #f2f2f2 33.3%, #f2f2f2 66.6%, #de0000 66.6%, #de0000 100%); }' +
+        '  url(https://raw.githubusercontent.com/NapoleonIVBonaparte/SFRY/main/out/html/img/bu/title_banner.jpg) center 40% / cover no-repeat; }' +
         '#content.main-menu .bu-star { color: #de0000; font-size: 3em; line-height: 1;' +
         '  text-shadow: 0 0 3px #ffd700, 0 0 3px #ffd700, 0 0 3px #ffd700; }' +
         '#content.main-menu .bu-title { color: #fff; font-size: 2em; text-transform: uppercase; letter-spacing: 0.12em;' +
@@ -37,6 +38,7 @@ if (titleEl) { titleEl.textContent = 'Brotherhood and Unity'; }
 
 @start_menu_2
 style: main-menu
+set-bg: https://raw.githubusercontent.com/NapoleonIVBonaparte/SFRY/main/out/html/img/bu/menu_bg.jpg
 
 - @start: Play
 - @menu_load: Load game
