@@ -372,6 +372,38 @@
       dendryUI.dendryEngine._runActions(scene.onArrival);
       var displayContent = dendryUI.dendryEngine._makeDisplayContent(scene.content, true);
       $('#qualities').append(dendryUI.contentToHTML.convert(displayContent));
+      window.updatePersonOfNote();
+  };
+
+  // Right-hand "Person of Note" panel. Shown only while pon_name is set.
+  window.updatePersonOfNote = function() {
+      var Q = dendryUI.dendryEngine.state.qualities;
+      var panel = document.getElementById('pon_sidebar');
+      if (!panel) { return; }
+      if (!Q.pon_name) {
+          panel.style.display = 'none';
+          document.body.classList.remove('pon-visible');
+          return;
+      }
+      var img = document.getElementById('pon_image');
+      if (Q.pon_image) {
+          img.src = Q.pon_image;
+          img.alt = Q.pon_name;
+          img.style.display = '';
+      } else {
+          img.style.display = 'none';
+      }
+      document.getElementById('pon_name').textContent = Q.pon_name;
+      var lines = document.getElementById('pon_lines');
+      lines.innerHTML = '';
+      var pon_lines = Q.pon_lines || [];
+      for (var i = 0; i < pon_lines.length; i++) {
+          var div = document.createElement('div');
+          div.textContent = pon_lines[i];
+          lines.appendChild(div);
+      }
+      panel.style.display = 'block';
+      document.body.classList.add('pon-visible');
   };
 
   window.changeTab = function(newTab, tabId) {

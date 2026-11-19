@@ -28,39 +28,23 @@ Primary federal organization: [+ primary_fed_org +]
 
 = Republics
 
-**Bosnia and Herzegovina**
+**Bosnia and Herzegovina**{!<br/>!}Stability: [+ bih_stability +]{!<br/>!}Federal attitude: [+ bih_fed_attitude +]{!<br/>!}Street pressure: [+ bih_street_pressure +]
 
-Stability: [+ bih_stability +]{!<br/>!}Federal attitude: [+ bih_fed_attitude +]{!<br/>!}Street pressure: [+ bih_street_pressure +]
+**Croatia**{!<br/>!}Stability: [+ cro_stability +]{!<br/>!}Federal attitude: [+ cro_fed_attitude +]{!<br/>!}Street pressure: [+ cro_street_pressure +]
 
-**Croatia**
+**Macedonia**{!<br/>!}Stability: [+ mac_stability +]{!<br/>!}Federal attitude: [+ mac_fed_attitude +]{!<br/>!}Street pressure: [+ mac_street_pressure +]
 
-Stability: [+ cro_stability +]{!<br/>!}Federal attitude: [+ cro_fed_attitude +]{!<br/>!}Street pressure: [+ cro_street_pressure +]
+**Montenegro**{!<br/>!}Stability: [+ mne_stability +]{!<br/>!}Federal attitude: [+ mne_fed_attitude +]{!<br/>!}Street pressure: [+ mne_street_pressure +]
 
-**Macedonia**
+**Serbia**{!<br/>!}Stability: [+ ser_stability +]{!<br/>!}Federal attitude: [+ ser_fed_attitude +]{!<br/>!}Street pressure: [+ ser_street_pressure +]
 
-Stability: [+ mac_stability +]{!<br/>!}Federal attitude: [+ mac_fed_attitude +]{!<br/>!}Street pressure: [+ mac_street_pressure +]
-
-**Montenegro**
-
-Stability: [+ mne_stability +]{!<br/>!}Federal attitude: [+ mne_fed_attitude +]{!<br/>!}Street pressure: [+ mne_street_pressure +]
-
-**Serbia**
-
-Stability: [+ ser_stability +]{!<br/>!}Federal attitude: [+ ser_fed_attitude +]{!<br/>!}Street pressure: [+ ser_street_pressure +]
-
-**Slovenia**
-
-Stability: [+ slo_stability +]{!<br/>!}Federal attitude: [+ slo_fed_attitude +]{!<br/>!}Street pressure: [+ slo_street_pressure +]
+**Slovenia**{!<br/>!}Stability: [+ slo_stability +]{!<br/>!}Federal attitude: [+ slo_fed_attitude +]{!<br/>!}Street pressure: [+ slo_street_pressure +]
 
 = Autonomous Provinces
 
-**Kosovo**
+**Kosovo**{!<br/>!}Stability: [+ kos_stability +]{!<br/>!}Federal attitude: [+ kos_fed_attitude +]{!<br/>!}Street pressure: [+ kos_street_pressure +]
 
-Stability: [+ kos_stability +]{!<br/>!}Federal attitude: [+ kos_fed_attitude +]{!<br/>!}Street pressure: [+ kos_street_pressure +]
-
-**Vojvodina**
-
-Stability: [+ voj_stability +]{!<br/>!}Federal attitude: [+ voj_fed_attitude +]{!<br/>!}Street pressure: [+ voj_street_pressure +]
+**Vojvodina**{!<br/>!}Stability: [+ voj_stability +]{!<br/>!}Federal attitude: [+ voj_fed_attitude +]{!<br/>!}Street pressure: [+ voj_street_pressure +]
 
 @paramilitaries
 

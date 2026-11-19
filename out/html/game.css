@@ -227,6 +227,43 @@ blockquote + blockquote.attribution {
   text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
                rgba(0, 0, 0, 0.1) -1px -1px 2px;
 }
+/* Person of Note panel (right). While it is showing, make room for it
+ * on the right the same way the left sidebar has room on the left. */
+body.pon-visible #mid_panel {
+  margin-right: 16.6rem;
+}
+@media screen and (max-width: 560px) {
+  body.pon-visible #mid_panel {
+    margin: 0 auto;
+  }
+}
+/* Person of Note panel (right) */
+#pon_sidebar {
+  text-align: center;
+  line-height: 1.3em;
+}
+#pon_sidebar h1 {
+  font-size: 1.1em;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0.3em 0 0.6em 0;
+  text-shadow: rgba(255, 255, 255, 0.75) 2px 2px 2px,
+               rgba(0, 0, 0, 0.1) -1px -1px 2px;
+}
+#pon_image {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.6em;
+}
+#pon_name {
+  font-weight: bold;
+  margin-bottom: 0.3em;
+}
+#pon_lines div {
+  font-size: 0.9em;
+  margin-bottom: 0.2em;
+}
 #qualities h1 + p:first-line {
   font-weight: normal;
 }
