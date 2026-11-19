@@ -38,7 +38,10 @@ if (!document.getElementById('bu-menu-style')) {
         '#game-title .bu-blue { color: #003893; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
         '#game-title .bu-white { color: #fff; text-shadow: 0 0 3px #000, 0 0 3px #000; }' +
         '#game-title .bu-red { color: #de0000; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
-        '#game-author { text-shadow: 0 0 3px #fff, 0 0 3px #fff; }';
+        '#game-author { text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
+        '.bu-yu-b { color: #003893; }' +
+        '.bu-yu-w { color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; }' +
+        '.bu-yu-r, .bu-lcy { color: #de0000; }';
     var styleEl = document.createElement('style');
     styleEl.id = 'bu-menu-style';
     styleEl.textContent = css;
@@ -659,7 +662,13 @@ new-page: true
 
 = Introduction
 
-*[Placeholder: the introduction text for Brotherhood and Unity will go here.]*
+> *"None of our republics would be anything if we weren't all together; but we have to create our own history - history of United {!<span class="bu-yu-b">Yugo</span><span class="bu-yu-w">sla</span><span class="bu-yu-r">via</span>!}, also in the future."*
+
+ - Josip Broz Tito
+
+While history has indeed proven the Marshal correct, and as the current ex-Yugoslav republics are little more than the playing field of 'great powers' for their business or other interests - it did not have to be so. Indeed, it does not have to be so either, change is always possible, and perhaps inevitable if one takes the positive stance. However, you are about to enter the heydays of the Socialist {!<span class="bu-yu-b">Yugo</span><span class="bu-yu-w">sla</span><span class="bu-yu-r">via</span>!}.
+
+Your mission is, relatively, simple: to try and preserve a functional Yugoslav federal or even unitary state. If possible, you ought to try to preserve the party (seeing as you start by playing it, or a part anyway) - nonetheless, the survival of the {!<span class="bu-lcy">LCY</span>!} is a secondary objective: saving {!<span class="bu-yu-b">Yugo</span><span class="bu-yu-w">sla</span><span class="bu-yu-r">via</span>!}, and preventing the horrors that await if vampiric nationalism arises again - is paramount.
 
 - @1928_main: Begin
 
