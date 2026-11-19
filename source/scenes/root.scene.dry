@@ -14,7 +14,7 @@ if (!document.getElementById('bu-menu-style')) {
     var css = '' +
         '#content.main-menu { text-align: center; }' +
         '#content.main-menu .bu-hero { margin: -1em -1.5em 1.5em -1.5em; padding: 2.5em 1em 2.2em 1em;' +
-        '  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),' +
+        '  background: linear-gradient(rgba(0,0,0,0.22), rgba(0,0,0,0.22)),' +
         '  url(https://raw.githubusercontent.com/NapoleonIVBonaparte/SFRY/main/out/html/img/bu/title_banner.jpg) center 40% / cover no-repeat; }' +
         '#content.main-menu .bu-star { color: #de0000; font-size: 3em; line-height: 1;' +
         '  text-shadow: 0 0 3px #ffd700, 0 0 3px #ffd700, 0 0 3px #ffd700; }' +
@@ -39,9 +39,12 @@ if (!document.getElementById('bu-menu-style')) {
         '#game-title .bu-white { color: #fff; text-shadow: 0 0 3px #000, 0 0 3px #000; }' +
         '#game-title .bu-red { color: #de0000; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
         '#game-author { text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
+        '.bu-yu-b, .bu-yu-w, .bu-yu-r { font-style: italic;' +
+        '  text-shadow: 1px 1px 0 rgba(0,0,0,0.22), -1px -1px 0 rgba(0,0,0,0.22), 1px -1px 0 rgba(0,0,0,0.22), -1px 1px 0 rgba(0,0,0,0.22); }' +
         '.bu-yu-b { color: #003893; }' +
-        '.bu-yu-w { color: #fff; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000; }' +
-        '.bu-yu-r, .bu-lcy { color: #de0000; }';
+        '.bu-yu-w { color: #fff; }' +
+        '.bu-yu-r { color: #de0000; }' +
+        '.bu-lcy { color: #de0000; font-style: italic; }';
     var styleEl = document.createElement('style');
     styleEl.id = 'bu-menu-style';
     styleEl.textContent = css;
