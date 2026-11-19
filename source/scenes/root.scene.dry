@@ -8,6 +8,50 @@ style: main-menu
 set-bg: https://raw.githubusercontent.com/NapoleonIVBonaparte/SFRY/main/out/html/img/bu/menu_bg.jpg
 go-to: start_menu_2
 on-arrival: {!
+// ===== Brotherhood and Unity: sidebar values =====
+// Set on the main menu, so the sidebar is already filled in there.
+// The numbers are placeholders until the first scene is written.
+// Stats run from 0 to 100.
+
+// Shown until the first scene opens (see 1928_main below).
+Q.date_text = "Post-Tito";
+
+// Main
+Q.primary_org = "LCY";
+Q.org_strength = 50;
+Q.person_of_note = "Expected";
+
+// Government
+Q.president_title = "President of the Presidency";
+Q.sfry_president = "Lazar Mojsov";
+Q.fec_chairman = "Branko Mikulić";
+Q.primary_fed_org = "LCY";
+
+// Federation: republics and autonomous provinces
+// codes: bih, cro, mac, mne, ser, slo, kos (Kosovo), voj (Vojvodina)
+Q.fed_units = ['bih', 'cro', 'mac', 'mne', 'ser', 'slo', 'kos', 'voj'];
+for (var i = 0; i < Q.fed_units.length; i++) {
+    var u = Q.fed_units[i];
+    Q[u + '_stability'] = 50;        // Political Stability
+    Q[u + '_fed_attitude'] = 50;     // Federal Attitude
+    Q[u + '_street_pressure'] = 10;  // Street Pressure
+}
+
+// Defense & Security
+Q.jna_readiness = 50;
+Q.jna_quality = 50;
+Q.jna_cohesion = 50;
+Q.sdb_quality = 50;
+Q.sdb_cohesion = 50;
+Q.sdb_loyalty = 50;
+Q.to_readiness = 50;
+Q.to_quality = 50;
+Q.to_cohesion = 50;
+
+// Polls stay hidden until elections exist.
+Q.elections_enabled = 0;
+// ===== end of Brotherhood and Unity values =====
+
 // Main menu styling. It is injected here (rather than in game.css) so that it
 // also works when this game is loaded as a mod through the base game's Mods menu.
 if (!document.getElementById('bu-menu-style')) {
@@ -83,46 +127,6 @@ go-to: start_menu
 
 @start
 on-arrival: {!
-// ===== Brotherhood and Unity: sidebar values =====
-// PLACEHOLDERS: names and numbers below are temporary until the
-// starting situation is decided. Stats run from 0 to 100.
-
-// Main
-Q.primary_org = "LCY";
-Q.org_strength = 50;
-Q.person_of_note = "(to be decided)";
-
-// Government
-Q.president_title = "President of the Presidency";
-Q.sfry_president = "(to be decided)";
-Q.fec_chairman = "(to be decided)";
-Q.primary_fed_org = "LCY";
-
-// Federation: republics and autonomous provinces
-// codes: bih, cro, mac, mne, ser, slo, kos (Kosovo), voj (Vojvodina)
-Q.fed_units = ['bih', 'cro', 'mac', 'mne', 'ser', 'slo', 'kos', 'voj'];
-for (var i = 0; i < Q.fed_units.length; i++) {
-    var u = Q.fed_units[i];
-    Q[u + '_stability'] = 50;        // Political Stability
-    Q[u + '_fed_attitude'] = 50;     // Federal Attitude
-    Q[u + '_street_pressure'] = 10;  // Street Pressure
-}
-
-// Defense & Security
-Q.jna_readiness = 50;
-Q.jna_quality = 50;
-Q.jna_cohesion = 50;
-Q.sdb_quality = 50;
-Q.sdb_cohesion = 50;
-Q.sdb_loyalty = 50;
-Q.to_readiness = 50;
-Q.to_quality = 50;
-Q.to_cohesion = 50;
-
-// Polls stay hidden until elections exist.
-Q.elections_enabled = 0;
-// ===== end of Brotherhood and Unity values =====
-
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
@@ -754,6 +758,10 @@ go-to: 1928_main
 go-to: custom_difficulty
 
 @1928_main
+on-arrival: {!
+Q.date_text = "23 September 1987";
+Q.person_of_note = "Nikola Ljubičić";
+!}
 audio: shuffle music/1928_1930/FruhlingsliedMendelssohn.mp3 music/1928_1930/AUF_HOHEN_BERGEN_noise_reduced.mp3 music/1928_1930/MarekWeber.mp3 music/1928_1930/BAUERNKAPELLE.mp3 music/1928_1933/DERLINDENBAUM_normalized.mp3 music/1928_1933/ZurSonne_zurFreiheit.mp3 music/1928_1933/arbeiter_marseille.mp3 music/1928_1933/Wann_wir_schreiten_Seit_an_Seit.mp3 music/1930_1933/Internationale-de_normalized.ogg music/1928_1930/LiedDerPompadour.mp3 music/1928_1933/SozialistenMarsch.mp3
 new-page: true
 go-to: main if hand_size == 3; main.main_easy if hand_size == 4
