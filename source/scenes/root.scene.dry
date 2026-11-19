@@ -83,6 +83,46 @@ go-to: start_menu
 
 @start
 on-arrival: {!
+// ===== Brotherhood and Unity: sidebar values =====
+// PLACEHOLDERS: names and numbers below are temporary until the
+// starting situation is decided. Stats run from 0 to 100.
+
+// Main
+Q.primary_org = "LCY";
+Q.org_strength = 50;
+Q.person_of_note = "(to be decided)";
+
+// Government
+Q.president_title = "President of the Presidency";
+Q.sfry_president = "(to be decided)";
+Q.fec_chairman = "(to be decided)";
+Q.primary_fed_org = "LCY";
+
+// Federation: republics and autonomous provinces
+// codes: bih, cro, mac, mne, ser, slo, kos (Kosovo), voj (Vojvodina)
+Q.fed_units = ['bih', 'cro', 'mac', 'mne', 'ser', 'slo', 'kos', 'voj'];
+for (var i = 0; i < Q.fed_units.length; i++) {
+    var u = Q.fed_units[i];
+    Q[u + '_stability'] = 50;        // Political Stability
+    Q[u + '_fed_attitude'] = 50;     // Federal Attitude
+    Q[u + '_street_pressure'] = 10;  // Street Pressure
+}
+
+// Defense & Security
+Q.jna_readiness = 50;
+Q.jna_quality = 50;
+Q.jna_cohesion = 50;
+Q.sdb_quality = 50;
+Q.sdb_cohesion = 50;
+Q.sdb_loyalty = 50;
+Q.to_readiness = 50;
+Q.to_quality = 50;
+Q.to_cohesion = 50;
+
+// Polls stay hidden until elections exist.
+Q.elections_enabled = 0;
+// ===== end of Brotherhood and Unity values =====
+
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
