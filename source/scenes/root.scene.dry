@@ -65,7 +65,7 @@ if (!document.getElementById('bu-menu-style')) {
         '#content.main-menu .bu-star { color: #de0000; font-size: 3em; line-height: 1;' +
         '  text-shadow: 0 0 3px #ffd700, 0 0 3px #ffd700, 0 0 3px #ffd700; }' +
         '#content.main-menu .bu-title { color: #fff; font-size: 2em; text-transform: uppercase; letter-spacing: 0.12em;' +
-        '  margin-top: 0.3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }' +
+        '  margin-top: 0.3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); white-space: nowrap; line-height: 1.2; }' +
         '#content.main-menu ul.choices { border: none; max-width: none; margin: 0; }' +
         '#content.main-menu ul.choices li { position: relative; height: 5.5em; padding: 0; margin-bottom: 0.7em;' +
         '  border: 2px solid #876; border-radius: 4px; overflow: hidden; background-color: #222;' +
@@ -96,6 +96,22 @@ if (!document.getElementById('bu-menu-style')) {
     styleEl.textContent = css;
     document.head.appendChild(styleEl);
 }
+// Shrink the big menu title until it fits on one line, whatever the
+// player's font or screen size.
+window.buFitTitle = function() {
+    var t = document.querySelector('#content.main-menu .bu-title');
+    if (!t) { return; }
+    var size = 2;
+    t.style.fontSize = size + 'em';
+    while (t.scrollWidth > t.clientWidth && size > 0.8) {
+        size -= 0.05;
+        t.style.fontSize = size + 'em';
+    }
+};
+if (!window.buFitTitleOnResize) {
+    window.buFitTitleOnResize = true;
+    window.addEventListener('resize', window.buFitTitle);
+}
 document.title = 'Brotherhood and Unity';
 var titleEl = document.getElementById('game-title');
 if (titleEl) {
@@ -109,6 +125,7 @@ if (authorEl) { authorEl.textContent = 'SaGrace'; }
 
 @start_menu_2
 style: main-menu
+on-display: {! if (window.buFitTitle) { window.buFitTitle(); } !}
 set-bg: https://raw.githubusercontent.com/NapoleonIVBonaparte/SFRY/main/out/html/img/bu/menu_bg.jpg
 
 # The order of these buttons matters: each one's background image is matched by position (see the CSS above).
