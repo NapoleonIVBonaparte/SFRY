@@ -483,7 +483,7 @@
   }
 
   window.onload = function() {
-    window.dendryUI.loadSettings({show_portraits: false});
+    window.dendryUI.loadSettings({show_portraits: true});
     if (localStorage[game.title + '_language']) {
         if (localStorage[game.title + '_language'] == "de") {
             window.loadGerman();

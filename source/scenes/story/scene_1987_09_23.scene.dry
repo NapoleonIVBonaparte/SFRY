@@ -1,0 +1,22 @@
+title: 23 September 1987
+new-page: true
+set-bg: img/bu/backgrounds/belgrade.jpg
+face-image: img/bu/scenes/1987_09_23.jpg
+on-arrival: {!
+Q.date_text = "23 September 1987";
+Q.person_of_note = "Nikola Ljubičić";
+// Right-hand "Person of Note" panel (hidden while pon_name is empty)
+Q.pon_name = "Nikola Ljubičić";
+Q.pon_lines = ["Serbian Representative in the Yugoslav Presidency", "General of the Army"];
+Q.pon_image = "img/bu/portraits/ljubicic.jpg";
+!}
+
+= 23 September 1987
+
+*[Placeholder: the text of the first scene will go here.]*
+
+- @to_be_written: To be continued (return to the main menu)
+
+@to_be_written
+on-arrival: started = 0
+go-to: root
