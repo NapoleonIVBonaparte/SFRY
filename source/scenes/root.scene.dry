@@ -23,7 +23,12 @@ if (!document.getElementById('bu-menu-style')) {
         '#content.main-menu ul.choices { border: none; max-width: 280px; margin: 0 auto; }' +
         '#content.main-menu ul.choices li { border: 2px solid #876; border-radius: 4px; margin-bottom: 0.6em;' +
         '  font-size: 1.15em; letter-spacing: 0.05em; }' +
-        '#content.main-menu ul.choices li:last-child { border-bottom: 2px solid #876; }';
+        '#content.main-menu ul.choices li:last-child { border-bottom: 2px solid #876; }' +
+        'body:has(#content.main-menu) #bg1 { background-position: center; }' +
+        '#game-title .bu-blue { color: #003893; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
+        '#game-title .bu-white { color: #fff; text-shadow: 0 0 3px #000, 0 0 3px #000; }' +
+        '#game-title .bu-red { color: #de0000; text-shadow: 0 0 3px #fff, 0 0 3px #fff; }' +
+        '#game-author { text-shadow: 0 0 3px #fff, 0 0 3px #fff; }';
     var styleEl = document.createElement('style');
     styleEl.id = 'bu-menu-style';
     styleEl.textContent = css;
@@ -31,7 +36,11 @@ if (!document.getElementById('bu-menu-style')) {
 }
 document.title = 'Brotherhood and Unity';
 var titleEl = document.getElementById('game-title');
-if (titleEl) { titleEl.textContent = 'Brotherhood and Unity'; }
+if (titleEl) {
+    titleEl.innerHTML = '<span class="bu-blue">Brotherhood</span> <span class="bu-white">and</span> <span class="bu-red">Unity</span>';
+}
+var authorEl = document.getElementById('game-author');
+if (authorEl) { authorEl.textContent = 'SaGrace'; }
 !}
 
 {!<div class="bu-hero"><div class="bu-star">&#9733;</div><div class="bu-title">Brotherhood and Unity</div></div>!}
