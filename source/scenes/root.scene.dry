@@ -4,16 +4,53 @@ go-to: post_event if started = 1; start_menu if started = 0
 
 @start_menu
 new-page: true
+style: main-menu
 go-to: start_menu_2
+on-arrival: {!
+// Main menu styling. It is injected here (rather than in game.css) so that it
+// also works when this game is loaded as a mod through the base game's Mods menu.
+if (!document.getElementById('bu-menu-style')) {
+    var css = '' +
+        '#content.main-menu { text-align: center; }' +
+        '#content.main-menu .bu-hero { margin: -1em -1.5em 1.5em -1.5em; padding: 2.5em 1em 2.2em 1em;' +
+        '  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),' +
+        '  linear-gradient(to bottom, #003893 0%, #003893 33.3%, #f2f2f2 33.3%, #f2f2f2 66.6%, #de0000 66.6%, #de0000 100%); }' +
+        '#content.main-menu .bu-star { color: #de0000; font-size: 3em; line-height: 1;' +
+        '  text-shadow: 0 0 3px #ffd700, 0 0 3px #ffd700, 0 0 3px #ffd700; }' +
+        '#content.main-menu .bu-title { color: #fff; font-size: 2em; text-transform: uppercase; letter-spacing: 0.12em;' +
+        '  margin-top: 0.3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }' +
+        '#content.main-menu ul.choices { border: none; max-width: 280px; margin: 0 auto; }' +
+        '#content.main-menu ul.choices li { border: 2px solid #876; border-radius: 4px; margin-bottom: 0.6em;' +
+        '  font-size: 1.15em; letter-spacing: 0.05em; }' +
+        '#content.main-menu ul.choices li:last-child { border-bottom: 2px solid #876; }';
+    var styleEl = document.createElement('style');
+    styleEl.id = 'bu-menu-style';
+    styleEl.textContent = css;
+    document.head.appendChild(styleEl);
+}
+document.title = 'Brotherhood and Unity';
+var titleEl = document.getElementById('game-title');
+if (titleEl) { titleEl.textContent = 'Brotherhood and Unity'; }
+!}
 
-= Social Democracy: An Alternate History
+{!<div class="bu-hero"><div class="bu-star">&#9733;</div><div class="bu-title">Brotherhood and Unity</div></div>!}
 
 @start_menu_2
+style: main-menu
 
-- @start: Start game
-- @election_simulation: Election simulation
+- @start: Play
+- @menu_load: Load game
+- @menu_settings: Settings
+- @game_over.achievements: Achievements
 - @credits: Credits
-- @game_over.achievements
+
+@menu_load
+on-arrival: {! window.dendryUI.showSaveSlots(); !}
+go-to: start_menu
+
+@menu_settings
+on-arrival: {! window.showOptions(); !}
+go-to: start_menu
 
 
 @start
@@ -598,19 +635,11 @@ Q.stampfer_advisor = 0; // Friedrich Stampfer
 set-bg: img/map_2.jpg
 new-page: true
 
-> *"Such a general development cannot be attributed to the false tactics of any single party or to the mistakes of individual leaders. On the contrary, the conduct of individual leaders is determined largely by the sentiments of the people as a whole. It would be erroneous, however, to regard the sentiments of the moment as reflecting the natural make-up and character of the people. They are merely the consequence of the special circumstances which have brought about this profound degradation of the entire nation."*
+= Introduction
 
- - Karl Kautsky, *Hitlerism and Social Democracy*, 1934
+*[Placeholder: the introduction text for Brotherhood and Unity will go here.]*
 
-This is a game of alternate history. While historical accuracy is a major concern, keep in mind that this is a *game*, and that any divergence from actual events will necessarily have to involve some element of make-believe. Nevertheless, please let the author know if there are any glaring mistakes.
-
-For more information on the politics and government of the German Republic, see the "Library" page on the top left. If this is your first time playing the game, it is strongly recommended that you read at least some of this information.
-
-- @1928_easy: Begin (easy difficulty)
-- @1928_main: Begin (normal difficulty)
-- @1928_hard: Begin (hard difficulty)
-- @1928_historical: Begin (historical mode)
-- @1928_custom: Customize difficulty settings
+- @1928_main: Begin
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; starting_rb_strength = 2500; rb_strength = 2500; left_dissent = 10; kpd_relation = 29; z_relation = 54; dvp_relation = 49; starting_budget = 5; budget = 5; hand_size = 4; starting_dissent = 0; starting_relations = 0;
