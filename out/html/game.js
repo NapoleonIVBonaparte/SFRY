@@ -492,6 +492,10 @@
     if (window.dendryUI.dark_mode) {
         document.body.classList.add('dark-mode');
     }
+    // First visit: no saved font size yet, so use the default.
+    if (typeof window.dendryUI.font_size !== 'number') {
+        window.dendryUI.font_size = 1.1;
+    }
     if (window.dendryUI.font_size != 1.1) {
         var fs = window.dendryUI.font_size;
         var sidebar_fs = fs - 0.1;
@@ -499,7 +503,6 @@
         document.getElementById("stats_sidebar").setAttribute("style", "font-size: " + sidebar_fs + "em;");
     }
     document.getElementById('font_size_value').textContent = window.dendryUI.font_size.toFixed(1) + "em";
-    window.pinnedCardsDescription = "Advisor cards - actions are only usable once per 6 months.";
   };
 
 }());
