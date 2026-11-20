@@ -27,10 +27,40 @@ That man, is General Nikola Ljubičić.
 
 @generals_choice
 new-page: true
+face-image: img/bu/scenes/1987_09_23_general.jpg
 
-= 23 September 1987
+= What of Serbia's Party?
 
-*Placeholder: the next scene, with the General's choices, will go here.*
+Ljubičić is not unknown to party intrigues, or Yugoslav ones. He has been described as Tito's right hand man, he was the defense secretary for the whole of Yugoslavia, the President of the Presidency of SR Serbia - and now he is a member of the Presidency of Yugoslavia. And yet, very rarely has the choice between Serbia's own figures been so unnecessarily muddied.
+
+On one hand, he has already promised Slobo his support, and Slobo has made it perfectly clear that he will fight for a stronger, more centrally-held Yugoslavia. And that is, of course, great for Ljubičić. He has been forced to chafe with practically sovereign Republics that defy the center, and it is essentially the consensus of every single senior JNA officer that the country needs to be tightened a little. The issue however, at least in the long-term, is what then contains Milošević? If he helps kill Ivan, politically of course, then what's to stop Slobo from killing all of them? Slobodan has, after all, proved to be a ruthless expert of party politics. Then again, so has Nikola - who is to say Slobo will be anything more but a pawn for JNA's necessary centralizations?
+
+On the other hand, Stambolić is not a bad man - but from Nikola's perspective, he very well may be a weakling. A technocrat, a somewhat centrist socialist within the Yugoslav framework, of course he too agrees with the need for centralization, both of SR Serbia (and against Kosovo's autonomy) and SFR Yugoslavia. However he is a milder man, determined to do it with consensus from the other Republics, and the leadership itself. Noble goals - but can Stambolić accomplish them? Moreover, is it worth changing horses mid-fight, and to support what is essentially a shallow center-mass? Nikola is unsure, but perhaps it may prove wise to clip Slobodan's wings before it is too late.
+
+Perhaps however, one might need play a game of chess? Use the Rook of Pavlović, to take out Queen Slobo - after all, fighting the slow King Stambolić is easier than the lightning rod the general has seen the past four months. On the obverse, keeping a Queen on-side, might be of greater worth than a not-yet encircled King? So are, the General's choices. . .
+
+- @keep_agreement
+- @shuffle
+
+@keep_agreement
+title: Comrade General Gračanin - I think it is wise to keep to the agreement.
+subtitle: And so shall rise, the leader of all the Serbs. . .
+new-page: true
+
+= What of Serbia's Party?
+
+*Placeholder: what happens when the General keeps to the agreement will go here.*
+
+- @to_be_written: To be continued (return to the main menu)
+
+@shuffle
+title: Comrade General Gračanin - Perhaps, more can be gained from a shuffle.
+subtitle: The generals' stars are a fickle friend, and a powerful enemy. . .
+new-page: true
+
+= What of Serbia's Party?
+
+*Placeholder: what happens when the General tries a shuffle will go here.*
 
 - @to_be_written: To be continued (return to the main menu)
 
