@@ -83,6 +83,13 @@ title: Comrade General Gračanin - Perhaps, more can be gained from a shuffle.
 subtitle: The generals' stars are a fickle friend, and a powerful enemy. . .
 new-page: true
 face-image: img/bu/scenes/1987_09_23_infanticide.jpg
+on-arrival: {!
+Q.primary_org = "LCY (Serbia)";
+Q.person_of_note = "Ivan Stambolić";
+Q.pon_name = "Ivan Stambolić";
+Q.pon_lines = ["President of the Presidency of Serbia"];
+Q.pon_image = "img/bu/portraits/stambolic.jpg";
+!}
 
 = Infanticide - The Tragedy of Survival
 
