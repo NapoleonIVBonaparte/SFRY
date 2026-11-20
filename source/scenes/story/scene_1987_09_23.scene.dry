@@ -47,6 +47,13 @@ title: Comrade General Gračanin - I think it is wise to keep to the agreement.
 subtitle: And so shall rise, the leader of all the Serbs. . .
 new-page: true
 face-image: img/bu/scenes/1987_09_23_patricide.jpg
+on-arrival: {!
+Q.primary_org = "LCY (Serbia)";
+Q.person_of_note = "Slobodan Milošević";
+Q.pon_name = "Slobodan Milošević";
+Q.pon_lines = ["President of the League of Communists of Serbia"];
+Q.pon_image = "img/bu/portraits/milosevic.jpg";
+!}
 
 = Patricide - The Basis of Politics
 
